@@ -1,33 +1,28 @@
-package com.NextBaseCRM.pages;
+package com.zerobank.pages.zerobankPages;
 
-import com.NextBaseCRM.utilities.Driver;
+import com.zerobank.utilities.Driver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 public class LoginPage  {
 
+
+
     public LoginPage(){
         PageFactory.initElements(Driver.get(), this);
     }
 
-    @FindBy(name = "USER_LOGIN")
+    @FindBy(xpath="//input[@id=\"user_login\"]")
     public WebElement userName;
 
-    @FindBy(id = "log_entry_favorites_4522")
-    public WebElement starIcon;
 
-    @FindBy(name="USER_PASSWORD")
+
+    @FindBy(id="user_password")
     public WebElement password;
 
-    @FindBy(className = "login-btn")
+    @FindBy(name = "submit")
     public WebElement submit;
-
-    @FindBy(xpath = "//input[@placeholder='Filter and search']")
-    public WebElement FilSearch;
-
-    @FindBy(xpath = "//span[text()='Favorites']")
-    public WebElement favoriteBtn;
 
 
     public void login(String userNameStr, String passwordStr) {
@@ -36,6 +31,9 @@ public class LoginPage  {
         submit.click();
         // verification that we logged
     }
+
+
+
 
 
 }

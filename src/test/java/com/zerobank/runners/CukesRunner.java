@@ -11,9 +11,9 @@ import org.junit.runner.RunWith;
                 "html:target/default-html-reports"
         },
         features = "src/test/resources/features",
-        glue = "com/vytrack/step_definitions",
+        glue = "com/zerobank/step_definitions",
         dryRun = false,
-        tags = "@wip",
+        tags = "@smoke",
         strict = true
         //  tags = "@driver or @VYT-123"
         //  tags = "@driver and not @VYT-123"
